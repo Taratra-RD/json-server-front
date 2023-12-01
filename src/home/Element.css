@@ -1,0 +1,56 @@
+.element {
+  display: flex;
+  flex-direction: row;
+}
+
+.element--form,
+.element--list {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  border: 1px solid;
+  padding-block: 1rem 1rem;
+  margin-inline: 1rem 1rem;
+  margin-block: 1rem 1rem;
+  justify-content: space-between;
+  border-color: aqua;
+  box-shadow: 1px 2px 3px rgba(31, 29, 29, 0.897),
+    1px 2px 6px rgba(0, 255, 255, 0.61);
+  border-radius: 0.3rem;
+}
+.element--form:hover,
+.element--list:hover {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  border: 1px solid;
+  padding-block: 1rem 1rem;
+  margin-inline: 1rem 1rem;
+  margin-block: 1rem 1rem;
+  justify-content: space-between;
+  border-color: aqua;
+  box-shadow: 3px 3px 7px rgba(0, 255, 255, 0.61);
+  border-radius: 0.3rem;
+}
+
+.logo {
+  width: 30%;
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.5rem 0;
+  color: aqua;
+}
+
+.text {
+  width: 70%;
+  font-size: 21px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem 1rem;
+  font-weight: 600;
+  color: aqua;
+}

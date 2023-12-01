@@ -1,0 +1,10 @@
+.home {
+  min-width: 90vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10rem 10rem;
+  background-color: rgba(31, 29, 29, 0.897);
+}
