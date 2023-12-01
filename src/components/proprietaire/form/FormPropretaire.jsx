@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import "./FormCategory.css";
 import axios from "axios";
 import api from "../../../api/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./FormProprietaire.css";
 
-export default function FormCategory() {
-  const [addCategory, setaddCategory] = useState();
+export default function FormPropretaire() {
+  const [addPropretaire, setaddPropretaire] = useState();
 
-  const handleAddCategory = (e) => {
+  const handleAddPropretaire = (e) => {
     e.preventDefault();
-    let frm = document.getElementsByName("category")[0];
+    let frm = document.getElementsByName("propretaire")[0];
     axios
-      .post(api + "/category", addCategory)
+      .post(api + "/proprietaire", addPropretaire)
       .then((res) => {
         toast(res.data.message);
         frm.reset();
@@ -23,13 +23,13 @@ export default function FormCategory() {
   };
 
   return (
-    <div className="form--category">
+    <div className="form--propretaire">
       <ToastContainer />
-      <div className="form--title">Nouveau catégorie</div>
+      <div className="form--title">Nouveau propretaire</div>
       <form
         className="form--body"
-        onSubmit={(e) => handleAddCategory(e)}
-        name="category"
+        onSubmit={(e) => handleAddPropretaire(e)}
+        name="propretaire"
       >
         <div className="form--field">
           <label className="form--label"></label>
@@ -37,7 +37,7 @@ export default function FormCategory() {
             type="text"
             className="form--input"
             onChange={(e) =>
-              setaddCategory((prev) => ({
+              setaddPropretaire((prev) => ({
                 ...prev,
                 designation: e.target.value,
               }))
@@ -48,7 +48,7 @@ export default function FormCategory() {
           <input
             type="submit"
             className="form--input"
-            value={"Ajouter un categorie"}
+            value={"Ajouter un propretaire"}
           />
         </div>
       </form>

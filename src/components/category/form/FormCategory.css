@@ -1,0 +1,36 @@
+.form--category {
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem 1rem;
+  min-width: 20rem;
+  border-radius: 0.3rem;
+  box-shadow: 2px 4px 5px black;
+}
+
+.form--title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-block: 0.5rem 1rem;
+}
+
+.form--body .form--field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 0 1rem;
+}
+
+.form--input {
+  height: 2.2rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  border: 1px solid grey;
+  font-size: 16px;
+}
+
+.form--select {
+  height: 2.4rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  border: 1px solid grey;
+  font-size: 16px;
+}

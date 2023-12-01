@@ -14,6 +14,9 @@ import Wifi from "./components/wifi/Wifi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FormAutres from "./components/autres/form/FormAutres";
 import FormCategory from "./components/category/form/FormCategory";
+import FormProprietaire from "./components/proprietaire/form/FormPropretaire";
+import FormEmplacement from "./components/emplacement/form/FormEmplacement";
+import FormOrdinateur from "./components/ordinateur/form/FormOrdinateur";
 
 function App() {
   return (
@@ -31,9 +34,15 @@ function App() {
           </Route>
           <Route path="/email" element={<Email />} />
           <Route path="/employe" element={<Employe />} />
-          <Route path="/ordinateur" element={<Ordinateur />} />
-          <Route path="/proprietaire" element={<Proprietaire />} />
-          <Route path="/emplacement" element={<Emplacement />} />
+          <Route path="/ordinateur" element={<Ordinateur />}>
+            <Route path="/ordinateur/form" element={<FormOrdinateur />} />
+          </Route>
+          <Route path="/proprietaire" element={<Proprietaire />}>
+            <Route path="/proprietaire/form" element={<FormProprietaire />} />
+          </Route>
+          <Route path="/emplacement" element={<Emplacement />}>
+            <Route path="/emplacement/form" element={<FormEmplacement />} />
+          </Route>
           <Route path="/serveur" element={<Serveur />} />
           <Route path="/wifi" element={<Wifi />} />
         </Routes>
