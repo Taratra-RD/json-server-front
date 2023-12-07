@@ -1,0 +1,7 @@
+.form--societe {
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem 1rem;
+  min-width: 20rem;
+  border-radius: 0.3rem;
+  box-shadow: 2px 4px 5px black;
+}

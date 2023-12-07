@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
+import "./FormSociete.css";
 import axios from "axios";
 import api from "../../../api/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./FormProprietaire.css";
 import { FaClipboardList } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
-import useGetOneProprietaire from "../../../hooks/useGetOneProprietaire";
+import useGetOneSociete from "../../../hooks/useGetOneSociete";
 import { IoArrowBackOutline } from "react-icons/io5";
 
-export default function FormPropretaire() {
-  const [addPropretaire, setaddPropretaire] = useState();
+export default function FormSociete() {
+  const [addSociete, setaddSociete] = useState();
   const { id } = useParams();
-  const { getProprietaire } = useGetOneProprietaire(id);
+  const { getSociete } = useGetOneSociete(id);
   const navigate = useNavigate();
 
-  const handleAddPropretaire = (e) => {
+  const handleAddSociete = (e) => {
     e.preventDefault();
-    let frm = document.getElementsByName("propretaire")[0];
+    let frm = document.getElementsByName("Societe")[0];
     axios
-      .post(api + "/proprietaire", addPropretaire)
+      .post(api + "/societe", addSociete)
       .then((res) => {
         toast(res.data.message);
         frm.reset();
@@ -30,18 +30,18 @@ export default function FormPropretaire() {
   };
 
   useEffect(() => {
-    if (getProprietaire) {
-      setaddPropretaire({
-        designation: getProprietaire.designation || "",
+    if (getSociete) {
+      setaddSociete({
+        designation: getSociete.designation || "",
       });
     }
-  }, [getProprietaire]);
+  }, [getSociete]);
 
-  const handlePutPropretaire = (e) => {
+  const handlePutSociete = (e) => {
     e.preventDefault();
-    let frm = document.getElementsByName("propretaire")[0];
+    let frm = document.getElementsByName("Societe")[0];
     axios
-      .post(api + "/proprietaire/" + id, addPropretaire)
+      .post(api + "/societe/" + id, addSociete)
       .then((res) => {
         toast(res.data.message);
         frm.reset();
@@ -52,7 +52,7 @@ export default function FormPropretaire() {
   };
 
   return (
-    <div className="form--propretaire">
+    <div className="form--societe">
       <IoArrowBackOutline
         style={{
           position: "absolute",
@@ -66,21 +66,17 @@ export default function FormPropretaire() {
       />
       <ToastContainer />
       <div className="form--title">
-        <span>
-          {id ? "Mise à jour d'un propretaire" : "Nouveau propretaire"}
-        </span>
+        <span>{id ? "Mise à jour d'un societe" : "Nouveau societe"}</span>
         <span>
           <span>
-            <FaClipboardList onClick={() => navigate("/proprietaire/list")} />
+            <FaClipboardList onClick={() => navigate("/societe/list")} />
           </span>
         </span>
       </div>
       <form
         className="form--body"
-        onSubmit={(e) =>
-          !id ? handleAddPropretaire(e) : handlePutPropretaire(e)
-        }
-        name="propretaire"
+        onSubmit={(e) => (!id ? handleAddSociete(e) : handlePutSociete(e))}
+        name="societe"
       >
         <div className="form--field">
           <label className="form--label"></label>
@@ -88,19 +84,19 @@ export default function FormPropretaire() {
             type="text"
             className="form--input"
             onChange={(e) =>
-              setaddPropretaire((prev) => ({
+              setaddSociete((prev) => ({
                 ...prev,
                 designation: e.target.value,
               }))
             }
-            value={addPropretaire && addPropretaire.designation}
+            value={addSociete && addSociete.designation}
           />
         </div>
         <div className="form--field">
           <input
             type="submit"
             className="form--input"
-            value={!id ? "Ajouter un propretaire" : "Maj un propretaire"}
+            value={!id ? "Ajouter un un societe" : "Maj un un societe"}
           />
         </div>
       </form>

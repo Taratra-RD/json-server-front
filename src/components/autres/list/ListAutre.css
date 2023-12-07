@@ -1,0 +1,61 @@
+.list--autre {
+  min-height: 90vh;
+}
+
+.autre--field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 20rem;
+  padding-block: 0.2rem 0.5rem;
+  border-bottom: 1px solid grey;
+}
+
+.autre--left {
+  width: 84%;
+}
+
+.autre--nom {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.autre--mdp {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.autre--right {
+  width: 16%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.details li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.details span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .back {
+    margin-top: 3rem;
+  }
+}

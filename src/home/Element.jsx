@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 export default function Element({ element }) {
   const navigate = useNavigate();
   return (
-    <div className="element">
+    <div className="element" style={{ textAlign: "start" }}>
       <div
         className="element--form"
         onClick={() => navigate(`/${element}/form`)}
@@ -16,7 +16,10 @@ export default function Element({ element }) {
         </div>
         <div className="text">Veuillez ajouter une nouvelle {element}</div>
       </div>
-      <div className="element--list">
+      <div
+        className="element--list"
+        onClick={() => navigate(`/${element}/list`)}
+      >
         <div className="logo">
           <MdOutlineList />
         </div>

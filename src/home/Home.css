@@ -5,6 +5,75 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: 10rem 10rem;
   background-color: rgba(31, 29, 29, 0.897);
+}
+
+@media (min-width: 500px) {
+  .home .logout {
+    padding-inline: 1rem 1rem;
+    padding-block: 0.5rem 0.5rem;
+    color: aqua;
+    border: 3px solid aqua;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+  }
+
+  .head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-block: 2rem 1rem;
+    margin-inline: 1rem 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .setting,
+  .home--nav {
+    font-size: 2rem;
+    color: aqua;
+  }
+
+  .body {
+    margin-top: 5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .home h1 {
+    font-size: 6vw;
+  }
+
+  .head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-block: 1rem 0.5rem;
+    margin-inline: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logout {
+    padding-inline: 0.7rem 0.7rem;
+    padding-block: 0.4rem 0.5rem;
+    color: aqua;
+    border: 2px solid aqua;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+  }
+
+  .setting,
+  .home--nav {
+    font-size: 7vw;
+    color: aqua;
+  }
+
+  .body {
+    margin-top: 5rem;
+    text-align: center;
+  }
 }

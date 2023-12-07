@@ -12,7 +12,7 @@ export default function useGetCategory() {
       .catch((err) => {
         console.log(err);
       });
-  }, [getCategories]);
+  }, []);
 
   return { getCategories };
 }

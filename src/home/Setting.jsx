@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { IoHome } from "react-icons/io5";
 import Element from "./Element";
-import "./Home.css";
 import { useNavigate } from "react-router-dom";
-import { IoSettingsSharp } from "react-icons/io5";
+import "./Home.css";
 
-export default function Home() {
-  const [elements] = useState(["autre"]);
+export default function Setting() {
+  const [elements] = useState([
+    "categorie",
+    "service",
+    "societe",
+    "proprietaire",
+  ]);
   const navigate = useNavigate();
-
   const signOut = () => {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("access_token");
@@ -31,10 +35,7 @@ export default function Home() {
         <div className="logout" onClick={signOut}>
           Logout
         </div>
-        <IoSettingsSharp
-          className="setting"
-          onClick={() => navigate("/setting")}
-        />
+        <IoHome className="home--nav" onClick={() => navigate("/")} />
       </div>
       <div className="body">
         <h1 style={{ color: "aqua" }}>GESTION DES MOT DE PASSE</h1>

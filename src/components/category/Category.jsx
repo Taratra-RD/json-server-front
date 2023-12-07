@@ -10,6 +10,8 @@ export default function Category() {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh ",
+        color: "aqua",
+        backgroundColor: "rgba(31, 29, 29, 0.897)",
       }}
     >
       <Outlet />
