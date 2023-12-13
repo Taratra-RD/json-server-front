@@ -1,0 +1,11 @@
+# /etc/systemd/system/start_apps.service
+
+[Unit]
+Description=Start React and Node apps
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/stage/back.sh
+
+[Install]
+WantedBy=default.target

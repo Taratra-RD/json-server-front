@@ -1,0 +1,12 @@
+# /etc/systemd/system/start_apps.service
+
+[Unit]
+Description=Start React and Node apps
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/stage/pass.sh
+
+[Install]
+WantedBy=default.target
+
